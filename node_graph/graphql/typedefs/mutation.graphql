@@ -1,0 +1,5 @@
+type Mutation {
+  signIn(usernameOrEmail: String!, password: String!): Token!
+  signUp(username: String!, email: String!, password: String!): Token!
+  refreshToken(refreshToken: String!): Token!
+}

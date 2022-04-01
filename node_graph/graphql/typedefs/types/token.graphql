@@ -1,0 +1,5 @@
+type Token {
+  accessToken: String!
+  refreshToken: String
+  username: String
+}
