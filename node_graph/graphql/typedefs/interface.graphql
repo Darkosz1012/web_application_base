@@ -1,0 +1,4 @@
+interface ITime @relationshipProperties {
+  createdAt: DateTime! @timestamp(operations: [CREATE])
+  updatedAt: DateTime! @timestamp(operations: [CREATE, UPDATE])
+}

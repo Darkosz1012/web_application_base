@@ -1,0 +1,10 @@
+type User {
+  # @exclude(operations: [CREATE, DELETE, UPDATE])
+  userId: ID! @id(autogenerate: true, unique: true)
+  username: String!
+  email: String!
+    @auth(rules: [{ operations: [READ], allow: { id: "$jwt.sub" } }])
+  password: String! @private
+  createdAt: DateTime! @timestamp(operations: [CREATE])
+  updatedAt: DateTime! @timestamp(operations: [CREATE, UPDATE])
+}
